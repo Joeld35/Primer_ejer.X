@@ -1,0 +1,62 @@
+MPASM 5.72                          MAIN.ASM   3-14-2017  11:18:18         PAGE  1
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00001     list p=16F887
+                      00002 #INCLUDE"PIC.INC"
+  00002007            00001 _CONFIG1         EQU  H'2007'
+  00002008            00002 _CONFIG2         EQU  H'2008'
+  00000003            00003 STATUS           EQU  H'0003'
+  00000085            00004 TRISA            EQU  H'0085'
+  00000188            00005 ANSEL            EQU  H'0188'
+  00000189            00006 ANSELH           EQU  H'0189'
+  00000005            00007 PORTA            EQU  H'0005'
+  00000000            00008 RA0              EQU  H'0000'
+  00000005            00009 RP0              EQU  H'0005'
+  00000006            00010 RP1              EQU  H'0006'
+                      00011 
+                      00012 
+                      00013 
+                      00003 
+                      00004 ;Configuracion de bits
+Message[303]: Program word too large.  Truncated to core size. (E3F4)
+2007   23F4           00005     __CONFIG _CONFIG1, 0XE3F4
+Message[303]: Program word too large.  Truncated to core size. (FEFF)
+2008   3EFF           00006     __CONFIG _CONFIG2, 0XFEFF
+                      00007 
+                      00008 
+                      00009 
+Message[313]: CBLOCK constants will start with a value of 0.
+                      00010     CBLOCK
+                      00011     ENDC
+Warning[205]: Found directive in column 1. (ORG)
+                      00012 ORG 0x00
+Warning[205]: Found directive in column 1. (END)
+Message[303]: Program word too large.  Truncated to core size. (E3F4)
+Message[303]: Program word too large.  Truncated to core size. (FEFF)
+23F4 3EFF             00013 END
+MPASM 5.72                          MAIN.ASM   3-14-2017  11:18:18         PAGE  2
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+ANSEL                             00000188
+ANSELH                            00000189
+PORTA                             00000005
+RA0                               00000000
+RP0                               00000005
+RP1                               00000006
+STATUS                            00000003
+TRISA                             00000085
+_CONFIG1                          00002007
+_CONFIG2                          00002008
+__16F887                          00000001
+
+Errors   :     0
+Warnings :     2 reported,     0 suppressed
+Messages :     5 reported,     0 suppressed
+
+
