@@ -1,4 +1,4 @@
-MPASM 5.72                          MAIN.ASM   3-14-2017  11:18:18         PAGE  1
+MPASM 5.72                          MAIN.ASM   3-14-2017  11:20:34         PAGE  1
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
@@ -30,14 +30,17 @@ Message[303]: Program word too large.  Truncated to core size. (FEFF)
                       00009 
 Message[313]: CBLOCK constants will start with a value of 0.
                       00010     CBLOCK
-                      00011     ENDC
+  00000000            00011         X
+  00000001            00012         Y
+  00000002            00013         Z
+                      00014     ENDC
 Warning[205]: Found directive in column 1. (ORG)
-                      00012 ORG 0x00
+                      00015 ORG 0x00
 Warning[205]: Found directive in column 1. (END)
 Message[303]: Program word too large.  Truncated to core size. (E3F4)
 Message[303]: Program word too large.  Truncated to core size. (FEFF)
-23F4 3EFF             00013 END
-MPASM 5.72                          MAIN.ASM   3-14-2017  11:18:18         PAGE  2
+23F4 3EFF             00016 END
+MPASM 5.72                          MAIN.ASM   3-14-2017  11:20:34         PAGE  2
 
 
 SYMBOL TABLE
@@ -51,6 +54,9 @@ RP0                               00000005
 RP1                               00000006
 STATUS                            00000003
 TRISA                             00000085
+X                                 00000000
+Y                                 00000001
+Z                                 00000002
 _CONFIG1                          00002007
 _CONFIG2                          00002008
 __16F887                          00000001

@@ -8,6 +8,9 @@
 
 
     CBLOCK
+	X
+	Y
+	Z
     ENDC
 ORG 0x00
 END
